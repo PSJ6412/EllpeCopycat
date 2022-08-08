@@ -1,0 +1,113 @@
+
+/*************************summary view 구역******************/
+.summaryView{
+  height: 850px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sum-top,.sum-bot{
+  min-width: 1250px;
+
+  display: inline-block;
+}
+.sum-top{height: 580px;margin: 0 0 7px 0;}
+.sum-bot{height: 200px;margin: 0;}
+
+.sumView1,.sumView2{
+  height: 100%;
+  display: inline-block;
+}
+.sumView1{
+  width: 75%;
+  float: left;
+  /* background: pink; */
+}
+
+.sumView2{
+  width: 25%;
+  float: right;
+  /* background: green; */
+}
+
+.sumView3,.sumView4,.sumView5,.sumView6{
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  /* background: hotpink; */
+  float: left;
+}
+
+.summaryView img{
+  width:auto;
+  height: 100%;
+  /* display: block; */
+}
+
+.imgspace{
+  /* border: 1px solid red; */
+  height: 100%;
+  padding: 0 10px 0 0;
+}
+
+/*************************5%할인 구역(제목)******************/
+.newGoods{
+  min-width: 1250px;
+  height: 1400px;
+  text-align: center;
+}
+.newGoodsTitle{
+  text-align: center;
+    padding: 30px 0 ;
+}
+.newGoodsTitle>h1{
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 5px;
+}
+.newGoodsTitle>span{
+  font-size: 11px;
+  color:#5D5D5D;
+}
+
+/*************************5%할인 구역(상품설명)******************/
+.goodsArea{
+  width: 1250px;
+  height: 1200px;
+  display: inline-block;
+}
+.goodsPos{
+  height: 630px;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.goodsImg{
+  height: 60%;
+}
+.goodsText{
+  margin: : 0 10px;
+  height: 40%;
+  display: inline-block;
+  width: 90%;
+}
+.goodsImg>a>img{
+  width: auto;
+  height: 100%;
+}
+.goodsColor{min-height: 7%;}
+.goodsColor>div{width: 10px; height: 10px;display: inline-block;margin-right: 3px;}
+.color1{background: gray;}
+.color2{background: blue;}
+.goodsName{ border-bottom: 1px solid #EAEAEA; padding-bottom: 5px;}
+.nameTop{color: rgb(219, 57, 57);}
+.goodsPrice{padding-bottom: 10px;}
+.goodsPrice>div{margin-bottom: 2px;}
+.origPirce,.salePirce1,.salePirce2{font-weight: bold;}
+.salePirce2{color: red;}
+.goodsContents{height: 68%;}
+.goodsText>div{
+  text-align: left;
+  padding-top: 5px;
+}

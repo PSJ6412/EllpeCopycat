@@ -1,0 +1,119 @@
+.productBody *{font-size:12px;}
+.productBody{
+  text-align: center;
+}
+.productContent{
+  display: inline-block;
+}
+
+/* 현재페이지 경로 */
+.prodRoute * {color: #acacac;}
+.prodRoute{
+  width: 1100px;
+  height: 20px;
+  margin: 8px 0 30px 0;
+}
+.prodRoute>span{float: right;}
+
+/* 상단 위치잡기 */
+.prodTop{
+    display: inline-block;
+    width: 1000px;
+}
+/* 상단 메인 이미지 */
+.prodTopLeft{float: left; }
+/* 상단 상품정보 */
+.prodTopRight{float: right; width: 450px; text-align: left;}
+.prodTitle{margin-bottom: 15px;}
+.prodTitle>h1{
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: -1px;
+}
+.prodTitle>h2{
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(219, 57, 57);
+  letter-spacing: -1px;
+}
+.prodDesc{margin-bottom: 20px;}
+
+.priceInfo table{width: 100%; margin-bottom: 20px;}
+.priceInfo td{padding: 10px 0 10px 0;}
+.colorBox{
+  border: 1px solid #d5d5d5;
+  width: 100%;
+  height: 30px;
+  padding: 3px;
+}
+.colorBox:hover{border: 1px solid #aaa; cursor: pointer;}
+.couponImg>img{
+  margin-bottom: 6px;
+}
+/* .selectProd{margin:6px;} */
+.selectProd>table{
+  width: 100%;
+}
+.selectProd tr{
+  border-top: 1px solid #e5e5e5;
+  height: 50px;
+}
+.selPord_Count{
+  border: 1px solid #d5d5d5;
+  width: 40px;
+  padding-left: 3px;
+  color : #333;
+}
+.selPord_del{
+  padding: 0 3px 2px 3px;
+  background: #888;
+  color: #fff;
+  font-size: 10px;
+  cursor: pointer;
+}
+.totalPrice{padding: 30px 0;
+  width: 100%;
+  font-size:13px;
+  font-weight: bold;
+  color: #333;
+  border-top: 1px solid #e5e5e5;
+}
+.tPrice,.tQty{float:right;}
+.tPrice{
+  font-size:16px;
+  font-weight: bold;
+  color: #333;
+}
+.prod_btn div{
+  text-align: center;
+  padding: 15px 0 15px 0 ;
+}
+.buy_btn{
+  width: 100%;
+  background-color: #cdb1b1;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.buy_btn:hover{background-color: #858585;}
+.cart_btn,.wish_btn{
+  width: 220px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+.cart_btn:hover,.wish_btn:hover{
+  background: #bbb;
+  border-color: #bbb;
+  color: #fff;
+}
+.cart_btn{float: left;}
+.wish_btn{float: right;}
+
+
+
+/* 중간 상품 상세영역 */
+.prodDetailArea{
+  height: 100px;
+  /* border: 1px solid blue; */
+
+}

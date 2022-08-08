@@ -1,0 +1,231 @@
+.basketBody{
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.basketContent{
+  width: 1200px;
+  display: inline-block;
+  padding: 0 50px;
+}
+
+.basket_title{
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+/* 상단 혜택정보 영역 */
+.basket_top{
+  display: table;
+  table-layout: fixed;
+  border: 2px solid #e8e8e8;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.basket_top>h3{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100px;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -1px;
+}
+
+.basket_memInfo{
+  padding-right: 15px;
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.info1{
+  text-align: left;
+  font-size: 11.5px;
+  letter-spacing: -1px;
+  padding: 8px 0 3px 0 ;
+}
+
+.info1>span{
+  font-weight:bold;
+  font-size: 11.5px;
+  letter-spacing: -1px;
+}
+
+.info2{
+  text-align: left;
+  border-top: 1px solid #e8e8e8;
+  width: 100%;
+  margin-top: 5px;
+  padding: 9px 0;
+}
+
+.info2>a{
+  padding-right: 30px;
+}
+
+.info2>a,
+.info2>span{
+  font-size: 11.5px;
+  letter-spacing: -1px;
+}
+
+/* TAB 영역 */
+.tabs{
+  display: table;
+  border: 1px solid #ddd;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+
+.tabs li{
+  display: table-cell;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.tabs li a{
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* 상품 정보 영역 */
+.product_tbl{
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+.product_tbl tr{
+  border-top: 1px solid #ddd;
+}
+
+.product_tbl tr>*{
+  padding: 10px 0;
+}
+
+.product_tbl tbody td{
+  border-left: 1px solid #ddd;
+}
+
+.product_tbl tbody tr td:nth-child(1),
+.product_tbl tbody tr td:nth-child(2),
+.product_tbl tbody tr td:nth-child(3){
+  border-left: 0;
+}
+.product_edit ul{
+  display: inline-block;
+}
+.product_edit li{
+  border: 1px solid #d1d1d1;
+  width: 75px;
+  text-align: center;
+  margin-bottom: 3px;
+  padding: 4px;
+}
+
+/* 제품을 표시하는 테이블의 하단에 총 가격을 표시하는 영역*/
+.total_pirce{
+  padding: 10px 0;
+  text-align: left;
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 15px;
+}
+.total_pirce>div{float: right;}
+
+.basket_edit{
+  text-align: left;
+  margin-bottom: 50px;
+}
+.basket_edit a{
+  border: 1px solid #aaa;
+  padding: 3px 3px;
+  color: #353535;
+}
+.basket_edit>div{
+  float: right;
+}
+
+/* 맨 하단에 크~게 총 가격이 표시되는 영역 */
+.price_tbl{
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.price_tbl tr{
+  border-top: 1px solid #ddd;
+}
+
+.price_tbl tr>*{
+  padding: 10px 0;
+  font-size: 12px;
+  color: #353535;
+}
+
+.price_tbl td{
+  border-left: 1px solid #ddd;
+}
+
+.price_tbl td:first-child{
+  border-left: 0;
+}
+.price_tbl td>span{
+  font-size: 22px;
+  font-weight: bold;
+  color: #353535;
+}
+
+/* 상품 주문하기 버튼 */
+.basket_btn{
+  margin-bottom: 50px;
+
+}
+.basket_btn>li{
+  width: 160px;
+  display: inline-block;
+  text-align: center;
+  padding: 13px 0;
+}
+.basket_btn>li>a{
+  font-size: 12px;
+}
+.basket_btn>li:nth-child(1){
+  background-color: #333;
+}
+.basket_btn>li:nth-child(2){
+  background-color: #858585;
+}
+.basket_btn>li:nth-child(3){
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+
+/* 맨 아래쪽 이용안내 영역 */
+.guideArea{
+  text-align: left;
+}
+.guideArea>h1{
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-bottom: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.basketGuide{
+  padding: 0 0 10px 10px;
+  border: 1px solid #e5e5e5;
+}
+.basketGuide>h3{
+  color: #404040;
+  font-size: 12px;
+  letter-spacing: -1px;
+  padding: 15px 0;
+}
+.basketGuide>ol{padding-left: 5px;}

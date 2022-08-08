@@ -1,0 +1,94 @@
+/*************************공통영역 ***********************/
+*{
+  margin:0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  color:#5D5D5D;
+  font: 11px 'Open Sans','Nanum Gothic','나눔고딕','맑은고딕','Malgun Gothic',AppleGothic,sans-serif;
+}
+
+input:focus,select:focus { outline: none; } /* 하이라이트제거 */
+
+/*************************상단 로고 구역******************/
+.header{
+  /* #f8f5f0;*/
+  background: #f0e0d9;
+  text-align: center;
+  /* width: 100%; */
+}
+
+.header-top{
+  width : 1250px;
+  height: 82px;
+  text-align: center; /*가운데*/
+  display: inline-block;
+}
+
+.header-top div{
+  display: inline-block;
+}
+
+.logo{ margin-top: 40px; }
+
+.sns{float: left; margin: 58px 0 0 30px;}
+
+.search{float: right; margin: 48px 40px 0 0; border-bottom: 1px solid black; height: 20px;}
+.search>input,button{border-style: none; background: transparent; }
+.search>input{color: #000;font-size: 10px;width: 120px;}
+.search>input::placeholder{color: #000;}
+.header-top>div{
+  display: inline-block;
+}
+
+.header-bot{
+  width: 1250px;
+  height: 40px;
+  /* border: solid 1px red; */
+  text-align: center; /*가운데*/
+  display: inline-block;
+}
+
+.rightBtn>ul{ float: right; margin-right:30px;/*li에서바로정렬하면 역방향으로나옴*/ }
+.leftBtn>ul{ float: left; margin-left:30px;}
+
+.header-bot ul{  display: inline-block; margin-top: 14px;}
+.header-bot li{
+  /* border: 1px solid blue; */
+
+  float: left;
+  margin-right: 10px;
+
+}
+/* 장바구니 갯수 표시 */
+.cart-Count{
+  background-color: #aaa;
+  color: white;
+  border-radius: 5px;
+  padding: 1px 4px;
+  margin-left: 1px;
+}
+
+/*************************상단 메인메뉴 구역******************/
+.top-menu{
+  /* border: 1px solid red; */
+  min-width : 1250px;
+  width: 100%;
+  text-align: center;
+  /* margin : 0 0 30px 0; */
+  padding: 0;
+  border-bottom: 1px solid #EAEAEA;
+  background-color:rgba(255, 255, 255, 0.3);/*까만색(0,0,0) 80% 투명도*/
+
+}
+.top-menu>ul{
+  display: inline-block;
+  padding: 20px 0px;}
+.top-menu li{
+  float: left;
+  margin-right: 20px;
+  letter-spacing: 1.2px;
+
+}
+.top-menu>ul>li>a{ color:#353535; font-size: 12px;}
