@@ -162,12 +162,12 @@
     // ex) 첫번째 id = cart_color0
     //     두번째 id = cart_color1
     var html = $('#prodList').html();
-        html += '<tr>';
+        html += '<tr id="tr"+'+rowCount+'>';
         html += '<td><p style="font-size:11px;">'+prodName+'</p>';
         html += '-<span style="font-weight:bold;" id="cart_color'+rowCount+'">'+color+'</span><span id="cart_size'+rowCount+'"></span></td>';
-        html += '<td><input type="number" class="selPord_Count" id="cart_qty'+rowCount+'" value="1" onchange="changeQty(this,this.id);">';
-        html += '<a class="selPord_del" onclick="delete_List">x</a></td>';
-        html += '<td style="text-align:right;" id="cart_price'+rowCount+'">'+prodPrice+'</td>';
+        html += '<td><input type="number" min="0" max="100" class="selPord_Count" id="cart_qty'+rowCount+'" value="1" onchange="changeQty('+rowCount+');">';
+        html += '<a class="selPord_del"'+rowCount+' onclick="delete_List(this)">x</a></td>';
+        html += '<td style="text-align:right;" class="cart_price" id="cart_price'+rowCount+'">'+prodPrice+'</td>';
         html += '</tr>';
     // table row 추가
     $('#prodList').html(html);
@@ -178,8 +178,14 @@
   }
 
   // 리스트 제거
-  function delete_List(){
-    alert("리스트 삭제 테스트~!");
+  function delete_List(obj){
+
+   //라인 삭제
+   $(obj).parent().parent().remove();
+
+   //총액 수정
+   setTotalPrice();
+
   }
 
   //업데이트
@@ -207,17 +213,17 @@
     document.getElementById('totalQty').innerText = "("+sumQty+"개)";
 
   }
+
   // 수량 변경
-  function changeQty(numBox,id){
+  function changeQty(rowNum){
     //row Index구하기
-    var index = $(numBox).parent().parent().index();
-    var qty = document.getElementById('cart_qty'+index).value;
+    var qty = document.getElementById('cart_qty'+rowNum).value;
     //상품 가격
     var prodPrice = document.getElementById("ProdPrice").innerText;
     var regex = /[^0-9]/g;
     var priceResult = prodPrice.replace(regex, "");
 
-    document.getElementById('cart_price'+index).innerText = (priceResult*qty)+"원";
+    document.getElementById('cart_price'+rowNum).innerText = (priceResult*qty)+"원";
 
     setTotalPrice();
   }

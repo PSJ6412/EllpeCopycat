@@ -17,6 +17,7 @@
         // db연결
         include '../dbConnect/connect.php';
 
+
         // 세션이 있으면
         if(isset($_SESSION["id"])){
 
