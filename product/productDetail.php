@@ -48,16 +48,17 @@
               <table>
                 <tr>
                   <th style="color:#000;font-weight:bold;">PRICE</th>
-                  <?php if($row["PROD_STOCK"] > 0){ ?>
-                    <td style="color:#000;"><?= $row["PROD_PRICE"]; ?>원</td>
+                  <?php
+                    $stock = $row["PROD_STOCK"];
+                    if($stock > 0){ ?>
+                    <td id="ProdPrice" style="color:#000;"><?= $row["PROD_PRICE"]; ?>원</td>
                   <?php }else{?>
                     <td style="color:#000;">품절</td>
                   <?php } ?>
                 </tr>
                 <?php
-                if(isset($row["PROD_SALE_PRICE"])){
+                  if(isset($row["PROD_SALE_PRICE"])){
                   $priceGap = $row['PROD_PRICE'] - $row['PROD_SALE_PRICE'];
-
                   ?>
                 <tr>
                   <th style="color:#ed8299;font-weight:bold;">할인판매가</th>
@@ -89,7 +90,11 @@
                 <tr>
                   <th>컬러</th>
                   <td>
-                    <select class="colorBox" onchange="add_List(this.options[this.selectedIndex].text);">
+                    <?php if($stock > 0){ ?> <!--품절일때 옵션 비활성화-->
+                      <select class="colorBox" onchange="add_List(this.options[this.selectedIndex].text);">
+                    <?php }else{?>
+                      <select class="colorBox" disabled>
+                    <?php } ?>
                       <option value="">- [필수] 컬러 선택 -</option>
                       <option value="" disabled>------------------</option>
                       <?php
