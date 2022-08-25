@@ -22,8 +22,8 @@ input:focus,select:focus { outline: none; } /* 하이라이트제거 */
 .header-top{
   width : 1250px;
   height: 82px;
-  text-align: center; /*가운데*/
-  display: inline-block;
+  display: block;
+  margin: 0 auto; /*가운데*/
 }
 
 .header-top div{
@@ -46,8 +46,8 @@ input:focus,select:focus { outline: none; } /* 하이라이트제거 */
   width: 1250px;
   height: 40px;
   /* border: solid 1px red; */
-  text-align: center; /*가운데*/
-  display: inline-block;
+  display: block;
+  margin: 0 auto; /*가운데*/
 }
 
 .rightBtn>ul{ float: right; margin-right:30px;/*li에서바로정렬하면 역방향으로나옴*/ }

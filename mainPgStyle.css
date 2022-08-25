@@ -7,16 +7,16 @@
 }
 
 .sum-top,.sum-bot{
-  min-width: 1250px;
+  width: 1250px;
 
-  display: inline-block;
+  display: block;
 }
-.sum-top{height: 580px;margin: 0 0 7px 0;}
-.sum-bot{height: 200px;margin: 0;}
+.sum-top{height: 580px;margin: 0 0 7px 0;margin: 0 auto; /*가운데*/}
+.sum-bot{height: 200px;margin: 0;margin: 0 auto; /*가운데*/}
 
 .sumView1,.sumView2{
   height: 100%;
-  display: inline-block;
+  display: block;
 }
 .sumView1{
   width: 75%;
@@ -33,7 +33,7 @@
 .sumView3,.sumView4,.sumView5,.sumView6{
   width: 25%;
   height: 100%;
-  display: inline-block;
+  display: block;
   /* background: hotpink; */
   float: left;
 }

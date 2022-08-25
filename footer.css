@@ -1,14 +1,109 @@
-.footer{
+.footerArea{
   height: 300px;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  margin: 50px 0;
-  background: #aaa;
-  opacity: 0.3;
-  color: #fff;
+  border-top: 1px solid #ddd;
 }
 
-.footer>span{
-  color: #fff;
-  font-size: 20px;
+.foot_top{
+  min-width : 1550px;
+  height: 82%;
+}
+
+.foot_top>ul{
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+  max-width: 1600px;
+  display: block;
+  height: 100%;
+}
+
+.foot_top li{
+  float: left;
+  padding: 0 30px;
+}
+
+.foot1,.foot2,.foot3,.foot4{border-right: 1px solid #ddd;}
+.foot1{width: 25%;}
+.foot2{width: 12%;}
+.foot3{width: 12%;}
+.foot4{width: 16%;}
+.foot5{width: 12%;}
+
+.foot_top h3{
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+
+.foot_top p{
+  padding: 3px 0;
+  letter-spacing: -0.5px;
+
+}
+
+/*은행선택버튼*/
+#cpnNum{font-size: 15px;font-weight: bold;}
+
+.cs_btnArea{
+  width: 170px;
+  margin-top: 10px;
+}
+
+.cs_btn1{width: 28%;}
+.cs_btn2{width: 48%;}
+
+.cs_btn1,.cs_btn2{
+  border: 1px solid #ddd;
+  cursor: pointer; /*손모양마우스*/
+  border-radius: 3px;
+  float: left;
+  text-align: center;
+  padding: 6px 3px;
+  margin: 2px;
+}
+
+.bankList{
+  border: 1px solid #ddd;
+  padding: 5px 3px 5px 2px;
+  margin-top: 8px;
+}
+
+
+.return_adr1{
+  text-decoration: underline;
+}
+
+.copyr, .return_adr1{
+  color: #999;
+  margin-top: 5px;
+    line-height: 200%;
+}
+
+.foot5 span{
+  font-weight: bold;
+  font-size: 12px;
+}
+
+
+
+/*====================맨 밑에 구간=============================*/
+
+.foot_btm{
+  background-color: #F8F8F8;
+  height: 18%;
+}
+
+.foot_btm *{color: #999;}
+
+.foot_btm ul{margin-left:20px; }
+
+.foot_btm li{
+  float: left;
+  font-size: 11px;
+  padding: 10px 0px 10px 20px;
+ margin-top: 10px;
+}
+
+.foot_btm li>span{
+  margin-left: 20px;
+
 }

@@ -2,6 +2,7 @@
 #joinBody{
   text-align: center;
   margin-top: 30px;
+    margin-bottom: 200px;
 }
 #joinBody input,select{
   border: 1px solid #d5d5d5;

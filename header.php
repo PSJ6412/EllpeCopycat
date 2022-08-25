@@ -30,9 +30,9 @@
         <?php }else{?>
             <!-- echo $_SESSION['name']; -->
           <li><a href="http://localhost/ellpeProject/dbConnect/logout.php">LOGOUT</a></li>
-          <li><a href="">MODIFY</a></li>
+          <li><a href="#">MODIFY</a></li>
         <?php }?>
-        <li><a href="">ORDER</a></li>
+        <li><a href="#">ORDER</a></li>
         <li><a href="http://localhost/ellpeProject/subMenu/basket.php">CART</a>
           <span class="cart-Count">
           <?php
@@ -44,18 +44,18 @@
           ?>
           </span>
         </li>
-        <li><a href="">MYPAGE</a></li>
+        <li><a href="#">MYPAGE</a></li>
       </ul>
     </div>
     <div class="rightBtn">
         <ul>
           <li><a href="http://localhost/ellpeProject/subMenu/notice.php">NOTICE</a></li>
-          <li><a href="">ENENT</a></li>
-          <li><a href="">Q&A</a></li>
-          <li><a href="">REVIEW</a></li>
-          <li><a href="">DELAY</a></li>
-          <li><a href="">DELIVERY</a></li>
-          <li><a href="">BOOKMARK</a></li>
+          <li><a href="#">ENENT</a></li>
+          <li><a href="#">Q&A</a></li>
+          <li><a href="#">REVIEW</a></li>
+          <li><a href="#">DELAY</a></li>
+          <li><a href="#">DELIVERY</a></li>
+          <li><a href="#">BOOKMARK</a></li>
         </ul>
       </div>
     </div>
@@ -63,21 +63,21 @@
   <div class="MenuArea">
     <div class="top-menu">
       <ul>
-        <li><a href="">BEST 50</a></li>
-        <li><a href="">another ledds</a></li>
-        <li><a href="">NEW 5%</a></li>
-        <li><a href="">OUTER</a></li>
-        <li><a href="">KNIT/CARDIGAN</a></li>
-        <li><a href="">TOP</a></li>
-        <li><a href="">BLOUSE/SHIRTS</a></li>
-        <li><a href="">DRESS</a></li>
-        <li><a href="">SKIRT</a></li>
-        <li><a href="">PANTS</a></li>
-        <li><a href="">EASY LOOK</a></li>
-        <li><a href="">EARLY FALL</a></li>
-        <li><a href="">SHOES/BAG</a></li>
-        <li><a href="">ACC</a></li>
-        <li><a href="">당일발송</a></li>
+        <li><a href="#">BEST 50</a></li>
+        <li><a href="#">another ledds</a></li>
+        <li><a href="#">NEW 5%</a></li>
+        <li><a href="#">OUTER</a></li>
+        <li><a href="#">KNIT/CARDIGAN</a></li>
+        <li><a href="#">TOP</a></li>
+        <li><a href="#">BLOUSE/SHIRTS</a></li>
+        <li><a href="#">DRESS</a></li>
+        <li><a href="#">SKIRT</a></li>
+        <li><a href="#">PANTS</a></li>
+        <li><a href="#">EASY LOOK</a></li>
+        <li><a href="#">EARLY FALL</a></li>
+        <li><a href="#">SHOES/BAG</a></li>
+        <li><a href="#">당일발송</a></li>
+        <li><a href="#">ACC</a></li>
       </ul>
     </div>
 

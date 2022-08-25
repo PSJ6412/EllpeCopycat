@@ -207,7 +207,7 @@
       // 가격 합계
       var regex = /[^0-9]/g;				                // 숫자가 아닌 문자열을 선택하는 정규식
       var price = table.rows[i].cells[2].innerText; // 대상 문자열
-      var priceResult = price.replace(regex, "");	      // 문자열에서 숫자가 아닌 모든 문자열을 빈 문자로 변경
+      var priceResult = price.replace(regex, "");	  // 문자열에서 숫자가 아닌 모든 문자열을 빈 문자로 변경
       sumPrice += parseInt(priceResult);
       // 수량 합계
       sumQty += parseInt($('#cart_qty'+i).val());
