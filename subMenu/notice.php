@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="http://localhost/ellpeProject/subMenu/notice.css">
+    <link rel="stylesheet" type="text/css" href="./notice.css">
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   </head>
   <body>
-    <!-- 헤더영역 (상대경로)-->
+    <!-- 헤더영역-->
     <?php include "../header.php"; ?>
 
     <div class="noticeBody">
@@ -103,7 +103,7 @@
             if($page <= 1) { //만약 page가 1보다 작거나 같으면
               echo "<li><<</li>"; //링크를 제거한다 !
             } else{
-              echo "<li><a href='http://localhost/ellpeProject/subMenu/notice.php?page=1'><<</a></li>"; //1page로 가는 링크 삽입 !
+              echo "<li><a href='/ellpeProject/subMenu/notice.php?page=1'><<</a></li>"; //1page로 가는 링크 삽입 !
             }
 
             if($blockNow <= 1)

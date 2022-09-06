@@ -6,8 +6,7 @@ if(!isset($_SESSION["id"])){
 
 header("Content-Type:application/json");
 
-include 'connect.php';
-
+include './connect.php';
 
 
 // array 변수

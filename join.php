@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="join.css">
+    <link rel="stylesheet" type="text/css" href="./join.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
     <!-- 헤더 영역 -->
-    <?php include "header.php"; ?>
+    <?php include "./header.php"; ?>
     <!-- 회원가입 영역 -->
     <div id="joinBody">
       <div id="joinContent">
@@ -35,11 +35,11 @@
           </tr>
           <tr>
             <th>비밀번호<img src="img/ico_required_blue.gif" alt=""></th>
-            <td><input type="text" class="memberInfo1" id="mem_pass1"</td>
+            <td><input type="password" class="memberInfo1" id="mem_pass1"</td>
           </tr>
           <tr>
             <th>비밀번호 확인<img src="img/ico_required_blue.gif" alt=""></th>
-            <td><input type="text" class="memberInfo1" id="mem_pass2" value="" onkeypress="passCheck();"></td>
+            <td><input type="password" class="memberInfo1" id="mem_pass2" value="" onkeypress="passCheck();"></td>
           </tr>
           <tr>
             <th>비밀번호 확인 질문<img src="img/ico_required_blue.gif" alt=""></th>
@@ -241,7 +241,7 @@ function member_join(){
   var news_accept = $('#news_accept').is(':checked'); // name 으로 확인하기
 
   $.ajax({
-  url:'http://localhost/ellpeProject/dbConnect/joinDB.php', //request 보낼 서버의 경로
+  url:'/ellpeProject/dbConnect/joinDB.php', //request 보낼 서버의 경로
   type:'post', // 메소드(get, post, put 등)
   data:{
       'mem_id' : mem_id

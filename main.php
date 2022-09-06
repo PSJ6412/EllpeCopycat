@@ -7,7 +7,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   </head>
   <body>
-    <?php include "header.php"; ?>
+    <?php include "./header.php"; ?>
       <div class="summaryView">
         <div class="sum-top">
           <div class="sumView1">
@@ -56,7 +56,7 @@
           <?php  ?>
           <div class="goodsPos">
             <div class="goodsImg">
-              <a href="http://localhost/ellpeProject/product/productDetail.php?prodId=<?= $product['PROD_ID']; ?>"><img src="img/<?=$product['PROD_IMG']; ?>"></a>
+              <a href="/ellpeProject/product/productDetail.php?prodId=<?= $product['PROD_ID']; ?>"><img src="img/<?=$product['PROD_IMG']; ?>"></a>
             </div>
             <div class="goodsText">
               <div class="goodsColor">
@@ -64,9 +64,13 @@
               </div>
               <div class="goodsName">
                 <?php if(isset($product['PROD_SALE_PRICE'])){ ?>
-                <a href="http://localhost/ellpeProject/product/productDetail.php?prodId=1" ><div class="nameTop"><?= $product['PROD_SUB_NAME']; ?></div></a>
+                <a href="/ellpeProject/product/productDetail.php?prodId=1" >
+                  <div class="nameTop"><?= $product['PROD_SUB_NAME']; ?></div>
+                </a>
                 <?php } ?>
-                <a href="http://localhost/ellpeProject/product/productDetail.php?prodId=1"><div class="nameBot"><?= $product['PROD_NAME']; ?></div></a>
+                <a href="/ellpeProject/product/productDetail.php?prodId=1">
+                  <div class="nameBot"><?= $product['PROD_NAME']; ?></div>
+                </a>
               </div>
               <div class="goodsPrice">
 
@@ -119,6 +123,6 @@
     </div>
   </body>
   <footer>
-    <?php include "footer.html"; ?>
+    <?php include "./footer.html"; ?>
   </footer>
 </html>

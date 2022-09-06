@@ -2,18 +2,18 @@
 
 ?>
 
-<link rel="stylesheet" type="text/css" href="http://localhost/ellpeProject/header.css">
+<link rel="stylesheet" type="text/css" href="/ellpeProject/header.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="header">
   <div class="header-top">
 
       <div class="logo">
-        <a href="http://localhost/ellpeProject/Main.php"><img src="http://localhost/ellpeProject/img/logo.png" alt=""></a>
+        <a href="/ellpeProject/Main.php"><img src="/ellpeProject/img/logo.png" alt=""></a>
       </div>
       <div class="sns">
-        <img src="http://localhost/ellpeProject/img/icon_facebook.png" alt="">
-        <img src="http://localhost/ellpeProject/img/icon_instagram.png" alt="">
+        <img src="/ellpeProject/img/icon_facebook.png" alt="">
+        <img src="/ellpeProject/img/icon_instagram.png" alt="">
       </div>
       <div class="search">
         <input type="text" name="" value="" placeholder="이쁜 블라우스 확인!">
@@ -25,15 +25,15 @@
     <div class="leftBtn">
       <ul>
          <?php if(!isset($_SESSION['id']) || !isset($_SESSION['name'])) { ?>
-          <li><a href="http://localhost/ellpeProject/login.php">LOGIN</a></li>
-          <li><a href="http://localhost/ellpeProject/join.php">JOIN US</a></li>
+          <li><a href="/ellpeProject/login.php">LOGIN</a></li>
+          <li><a href="/ellpeProject/join.php">JOIN US</a></li>
         <?php }else{?>
             <!-- echo $_SESSION['name']; -->
-          <li><a href="http://localhost/ellpeProject/dbConnect/logout.php">LOGOUT</a></li>
+          <li><a href="/ellpeProject/dbConnect/logout.php">LOGOUT</a></li>
           <li><a href="#">MODIFY</a></li>
         <?php }?>
         <li><a href="#">ORDER</a></li>
-        <li><a href="http://localhost/ellpeProject/subMenu/basket.php">CART</a>
+        <li><a href="/ellpeProject/subMenu/basket.php">CART</a>
           <span class="cart-Count">
           <?php
             if(isset($_COOKIE['basketCount'])){
@@ -49,7 +49,7 @@
     </div>
     <div class="rightBtn">
         <ul>
-          <li><a href="http://localhost/ellpeProject/subMenu/notice.php">NOTICE</a></li>
+          <li><a href="/ellpeProject/subMenu/notice.php">NOTICE</a></li>
           <li><a href="#">ENENT</a></li>
           <li><a href="#">Q&A</a></li>
           <li><a href="#">REVIEW</a></li>

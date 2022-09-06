@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="http://localhost/ellpeProject/product/productDetail.css">
+    <link rel="stylesheet" type="text/css" href="/ellpeProject/product/productDetail.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title></title>
   </head>
@@ -262,14 +262,14 @@
     }
 
     //세션 id
-    var session_id = "<?= isset($_session['id']) ? $_session['id'] : ''; ?>";
+    var session_id = "<?= isset($_SESSION["id"]) ? $_SESSION['id'] : ''; ?>";
 
     // 세션이 있으면
     if(session_id != ""){
-      setSessionBasket(cartList); //DB저장
+        setSessionBasket(cartList); //DB저장
     }else{
-       setCookieBasket(cartList); //쿠키생성
-       location.reload();
+        setCookieBasket(cartList); //쿠키생성
+        location.reload();
     }
   }
 
@@ -277,7 +277,7 @@
   var setSessionBasket = function(cartList) {
 
     $.ajax({
-    url:'http://localhost/ellpeProject/dbConnect/basket_Insert.php', //request 보낼 서버의 경로
+    url:'/ellpeProject/dbConnect/basket_Insert.php', //request 보낼 서버의 경로
     type:'post', // 메소드(get, post, put 등)
     dataType: "json",
     data:{ //보낼 데이터
@@ -289,7 +289,7 @@
 
       if(response.result == 1) {
         //성공이면 장바구니 페이지로 이동
-        location.href = "http://localhost/ellpeProject/subMenu/basket.php";
+        location.href = "/ellpeProject/subMenu/basket.php";
       }
     },
     error: function(request,status,error) {

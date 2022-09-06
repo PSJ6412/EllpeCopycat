@@ -25,8 +25,9 @@ $row = mysqli_fetch_array($result);
    // 세션 추가
    $_SESSION["id"] = $row["MEM_ID"];
    $_SESSION["name"] = $row["MEM_NAME"];
+
    // 메세지 출력
-    echo json_encode(array("result" => 1, "message" => $row["MEM_NAME"]."님 환영합니다 !"));
+    echo json_encode(array("result" => 1, "message" => $_SESSION["name"]."님 환영합니다 !"));
     return;
  }else{
     echo json_encode(array("result" => 0, "message" => "아이디 또는 비밀번호가 일치하지 않습니다 !"));

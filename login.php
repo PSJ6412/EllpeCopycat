@@ -51,7 +51,7 @@
       var login_pass = $('#login_pw').val();
 
       $.ajax({
-      url:'http://localhost/ellpeProject/dbConnect/loginDB.php', //request 보낼 서버의 경로
+      url:'/ellpeProject/dbConnect/loginDB.php', //request 보낼 서버의 경로
       type:'post', // 메소드(get, post, put 등)
       data:{
         'id' : login_id ,
@@ -64,7 +64,7 @@
         alert(response.message);
 
         if(response.result == 1) {
-          window.location.href = "http://localhost/ellpeProject/main.php";
+          window.location.href = "/ellpeProject/main.php";
        }
       },
 

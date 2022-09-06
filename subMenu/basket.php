@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>❤장바구니</title>
-    <link rel="stylesheet" type="text/css" href="basket.css">
+    <link rel="stylesheet" type="text/css" href="./basket.css">
   </head>
   <body>
     <!-- 헤더 영역 -->
@@ -63,7 +63,7 @@
             </tr>
           </thead>
           <tbody>
-            <!-- 반복구간 시작 -->
+
             <?php
             // 세션이 있으면 ,유저가 저장한 cart데이터 로딩
             if(isset($_SESSION["id"])){
@@ -84,14 +84,18 @@
                 $option = !empty($cart['PROD_SIZE']) ? ($cart['PROD_COLOR'].'/'.$cart['PROD_SIZE']) : $cart['PROD_COLOR'];
 
                 // 세일가격 없으면 원가격 표시
-                $price = !empty($cart['PROD_PRICE']) ? $cart['PROD_SALE_PRICE'] : $cart['PROD_PRICE'];
+                $price = empty($cart['PROD_SALE_PRICE']) ? $cart['PROD_PRICE'] : $cart['PROD_SALE_PRICE'];
+
+                // 상품 이미
+                $prodImg = $cart['PROD_IMG'];
 
                 // 총가격 = 가격 * 수량
                 $totalPrice = ($price * $cart['CART_QTY']);
              ?>
+             <!-- 반복구간 시작 -->
                 <tr>
                   <td class="test"><input type="checkbox" name="" value=""></td>
-                  <td><img src="../img/basket1.webp" alt="" style=" max-width: 80px;"></td>
+                  <td><img src="../img/<?=$prodImg;?>" alt="" style=" max-width: 80px;"></td>
                   <td><?php echo $cart['PROD_NAME'];?><p>[옵션:<?php echo $option;?>]</p></td>
                   <td><?php echo $price;?>원</td>
                   <td>
@@ -132,7 +136,7 @@
 
               // 갯수만큼 반복
               for ($row=0; $row < $count; $row++) {
-              //여기서는 베열로 인식을 못함.. 어떡하지 ? => json_decode로 묶어서 출력하니 해결!!!!(21.11.18)
+              //여기서는 베열로 인식을 못함.. 어떡하지 ? => json_decode로 묶어서 출력하니 해결!!!!(22.1.18)
               //echo print_r($test[$row],true);
 
               // 상품 정보 가져오기
@@ -149,7 +153,7 @@
 
               $qty = print_r($cArray[$row][3],true);
               $prodName = $dbRow["PROD_NAME"];
-              $prodPrice = !empty($dbRow['PROD_PRICE']) ? $dbRow['PROD_SALE_PRICE'] : $dbRow['PROD_PRICE'];
+              $prodPrice = empty($dbRow['PROD_SALE_PRICE']) ? $dbRow['PROD_PRICE'] : $dbRow['PROD_SALE_PRICE'];
               $totalPrice = ($prodPrice * $qty);
               $prodImg = $dbRow["PROD_IMG"];
               $prodId = print_r($cArray[$row][0],true);
@@ -157,9 +161,10 @@
 
 
             ?>
+            <!-- 반복구간 시작 -->
             <tr>
               <td class="test"><input type="checkbox" name="" value=""></td>
-              <td><img src="../img/basket1.webp" alt="" style=" max-width: 80px;"></td>
+              <td><img src="../img/<?=$prodImg;?>" alt="" style=" max-width: 80px;"></td>
               <td><?= $prodName;?><p>[옵션:<?= $option;?>]</p></td>
               <td><?= $prodPrice;?>원</td>
               <td>
@@ -184,16 +189,17 @@
                 </ul>
               </td>
             </tr>
+            <!-- 반복구간 끝 -->
+          <?php } } } ?>
 
-          <?php } } ?>
-
-          </tbody>
+         </tbody>
         </table>
+
         <div class="total_pirce">
           [기본배송]
           <div>
-            <span>상품구매금액20,000+배송비2,500 = 합계:</span>
-            <span>22,500</span>원
+            <span>상품구매금액0+배송비2,500 = 합계:</span>
+            <span>0</span>원
           </div>
 
         </div>
@@ -214,15 +220,12 @@
             <th>결제예정금액</th>
           </tr>
           <tr>
-            <td><span>45,000</span> 원</td>
-            <td><span>+2,500</span> 원</td>
-            <td><span>-2,300</span> 원</td>
-            <td><span>=45,200</span> 원</td>
+            <td><span>0</span> 원</td>
+            <td><span>0</span> 원</td>
+            <td><span>-0</span> 원</td>
+            <td><span>=0</span> 원</td>
           </tr>
         </table>
-
-
-        <?php } ?>
 
         <ul class="basket_btn">
           <li><a href="" style="color: #fff;">전체상품주문</a></li>

@@ -2,7 +2,7 @@
 
 header("Content-Type:application/json");
 
-include 'connect.php';
+include './connect.php';
 
 
 $mem_id = $_REQUEST['mem_id'];
