@@ -9,7 +9,7 @@
   <div class="header-top">
 
       <div class="logo">
-        <a href="/ellpeProject/Main.php"><img src="/ellpeProject/img/logo.png" alt=""></a>
+        <a href="/ellpeProject/main.php"><img src="/ellpeProject/img/logo.png" alt=""></a>
       </div>
       <div class="sns">
         <img src="/ellpeProject/img/icon_facebook.png" alt="">

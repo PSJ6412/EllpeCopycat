@@ -21,6 +21,8 @@ $row = mysqli_fetch_array($result);
 // echo $row['NAME'];
 //print_r($row);
 
+session_start();
+
  if($row){
    // 세션 추가
    $_SESSION["id"] = $row["MEM_ID"];

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>❤장바구니</title>
     <link rel="stylesheet" type="text/css" href="./basket.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
     <!-- 헤더 영역 -->
@@ -51,6 +52,7 @@
           <thead>
             <tr>
               <th><input type="checkbox" name="" value=""></th>
+              <th style="display:none;">ID</th>
               <th>이미지</th>
               <th>상품정보</th>
               <th>판매가</th>
@@ -69,7 +71,7 @@
             if(isset($_SESSION["id"])){
 
               //cart 정보
-              $query_cart = "SELECT c.PROD_SIZE, c.PROD_COLOR, c.CART_QTY, p.PROD_NAME, p.PROD_PRICE, p.PROD_SALE_PRICE , p.PROD_IMG
+              $query_cart = "SELECT c.CART_ID,c.PROD_SIZE, c.PROD_COLOR, c.CART_QTY, p.PROD_NAME, p.PROD_PRICE, p.PROD_SALE_PRICE , p.PROD_IMG
                                FROM cart as c left join products as p
                                  ON c.PROD_ID = p.PROD_ID
                               WHERE c.MEM_ID = $sessionId";
@@ -95,11 +97,12 @@
              <!-- 반복구간 시작 -->
                 <tr>
                   <td class="test"><input type="checkbox" name="" value=""></td>
+                  <td id="cartId" style="display:none;"><?=$cart["CART_ID"];?></td>
                   <td><img src="../img/<?=$prodImg;?>" alt="" style=" max-width: 80px;"></td>
                   <td><?php echo $cart['PROD_NAME'];?><p>[옵션:<?php echo $option;?>]</p></td>
                   <td><?php echo $price;?>원</td>
                   <td>
-                    <input type="number" name="" value="">
+                    <input type="number" name="" value="<?=$cart['CART_QTY'];?>">
                     <a href="#">변경</a>
                   </td>
                   <td>
@@ -116,7 +119,7 @@
                     <ul>
                       <li><a href="#">주문하기</a></li>
                       <li><a href="#">관심상품등록</a></li>
-                      <li><a href="#">✖ 삭제</a></li>
+                      <li><a onclick="deleteCart(<?=$cart["CART_ID"];?>);">✖ 삭제</a></li>
                     </ul>
                   </td>
                 </tr>
@@ -263,3 +266,37 @@
     <?php include "../footer.html"; ?>
   </footer>
 </html>
+
+
+<script type="text/javascript">
+
+  //cart삭제
+  var deleteCart = function(cartId) {
+
+    $.ajax({
+    url:'/ellpeProject/dbConnect/basket_Delete.php', //request 보낼 서버의 경로
+    type:'post', // 메소드(get, post, put 등)
+    dataType: "json",
+    data:{ //보낼 데이터
+        'cartId' : cartId
+    },
+
+    success: function(data) {
+      if(data) {
+        //새로고침
+        location.reload();
+     } else {
+        alert("오류가 발생하였습니다.");
+     }
+
+    },
+    error: function(request,status,error) {
+        //서버로부터 응답이 정상적으로 처리되지 못햇을 때 실행
+        // alert("회원가입 실패");
+        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+      }
+
+    });
+  }
+
+  </script>

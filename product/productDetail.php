@@ -23,8 +23,8 @@
             //db연결
             include '../dbConnect/connect.php';
 
-            //상품정보 로딩
-            $query = "SELECT * FROM PRODUCTS WHERE PROD_ID =".$_GET['prodId'];
+            //상품정보 로딩 (테이블명 대소문자구분)
+            $query = "SELECT * FROM products WHERE PROD_ID =".$_GET['prodId'];
 
             $result = mysqli_query( $conn, $query);
 
@@ -99,7 +99,7 @@
                       <option value="" disabled>------------------</option>
                       <?php
                       //상품색상옵션 로딩
-                        $query2 = "SELECT PROD_COLOR FROM PROD_COLOR WHERE PROD_ID =".$_GET['prodId'];
+                        $query2 = "SELECT PROD_COLOR FROM prod_color WHERE PROD_ID =".$_GET['prodId'];
 
                         $result2 = mysqli_query( $conn, $query2);
 

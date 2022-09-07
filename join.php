@@ -262,7 +262,7 @@ function member_join(){
   success: function(data) {
     if(data) {
       alert("또롱엘프 회원가입 완료");
-      location.href = "main.php";
+      location.href = "/ellpeProject/main.php";
    } else {
       alert("회원가입 실패");
    }

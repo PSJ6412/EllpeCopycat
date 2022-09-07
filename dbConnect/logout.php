@@ -10,7 +10,7 @@
 
   //성공 시 메인페이지로 이동
   if($result){
-    header('Location: /ellpeProject/Main.php');
+    header('Location: /ellpeProject/main.php');
   }
 
  ?>
